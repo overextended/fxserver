@@ -1,0 +1,27 @@
+{
+  "name": "fxserver",
+  "dependencies": {
+    "7zip-bin": "^5.2.0",
+    "@citizenfx/client": "latest",
+    "@citizenfx/server": "latest",
+    "@types/bun": "latest",
+    "@types/node": "^25.6.0",
+    "@types/node-7z": "^2.1.11",
+    "@types/unzipper": "^0.10.11",
+    "commander": "^14.0.3",
+    "node-7z": "^3.0.0",
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.2",
+    "unzipper": "^0.12.3"
+  },
+  "private": true,
+  "scripts": {
+    "format": "bun prettier ./scripts package.json -w",
+    "fx": "bun run scripts/cli --",
+    "postinstall": "git submodule sync --recursive && git submodule update --init --recursive --remote"
+  },
+  "type": "module",
+  "bun-create": {
+    "start": "bun fx start"
+  }
+}

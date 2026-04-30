@@ -1,0 +1,15 @@
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+.idea
+.vscode
+.luarc.json
+.replxx_history*
+
+node_modules
+/bin
+/server-data/cache
+/server-data/resources/*
+/server-data/config/secrets.cfg
