@@ -14,7 +14,7 @@ interface ArtifactsApi {
 const infoFile = file(join(bin, ".info"));
 
 export async function checkUpdate() {
-  const info: { artifact: string; last_updated: number } & ArtifactsApi =
+  const info: { artifact: string; last_updated: number } =
     (await infoFile.json().catch(() => {})) || {
       artifact: "0",
       last_updated: 0,
