@@ -15,7 +15,10 @@ const infoFile = file(join(bin, ".info"));
 
 export async function checkUpdate() {
   const info: { artifact: string; last_updated: number } & ArtifactsApi =
-    await infoFile.json().catch(() => ({}));
+    (await infoFile.json().catch(() => {})) || {
+      artifact: "0",
+      last_updated: 0,
+    };
 
   const timestamp = Math.floor(Date.now() / 1000);
 
@@ -59,7 +62,7 @@ export async function checkUpdate() {
     );
   }
 
-  update(
+  await update(
     response.recommendedArtifact,
     response[isLinux ? "linuxDownloadLink" : "windowsDownloadLink"],
   );
