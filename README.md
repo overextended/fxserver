@@ -4,7 +4,7 @@ A minimal template for setting up a FiveM server using `bun create`.
 
 ## Getting started
 > [!NOTE]
-> Install [Bun](https://bun.com) and [Git](https://git-scm.com/) if you don't already have them.
+> Install [Bun](https://bun.com) (v1.3.11 or higher) and [Git](https://git-scm.com/) if you don't already have them.
 
 ```bash
 bun create overextended/fxserver
@@ -23,3 +23,8 @@ Your cfx license, mysql connection string, and other private variables (e.g. API
 ```bash
 bun fx start
 ```
+
+## Troubleshooting
+
+- **FXServer artifacts won't download.**
+  - We've confirmed that any version of Bun prior to v1.3.11 will silently fail, due to an error with BunFile.
