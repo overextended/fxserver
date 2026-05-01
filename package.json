@@ -22,6 +22,10 @@
   },
   "type": "module",
   "bun-create": {
+    "postinstall": [
+      "git submodule add -b main https://github.com/overextended/ox_types lua-addons/ox_types",
+      "git submodule add -b main https://github.com/overextended/fivem-lls-addon lua-addons/fivem-lls-addon"
+    ],
     "start": "bun fx start"
   }
 }

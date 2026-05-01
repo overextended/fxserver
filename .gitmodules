@@ -1,6 +1,0 @@
-[submodule "lua-addons/fivem-lls-addon"]
-	path = lua-addons/fivem-lls-addon
-	url = https://github.com/overextended/fivem-lls-addon
-[submodule "lua-addons/ox_types"]
-	path = lua-addons/ox_types
-	url = https://github.com/overextended/ox_types
